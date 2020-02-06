@@ -3,7 +3,7 @@ import "./post-add-form.scss";
 
 const PostAddForm = ({ onAdd }) => {
     return (
-        <div className="bottom-panel d-flex">
+        <form className="bottom-panel d-flex">
             <input
                 type="text"
                 placeholder="О чем вы думаете сейчас?"
@@ -15,7 +15,7 @@ const PostAddForm = ({ onAdd }) => {
                 onClick={() => onAdd('hello')}>
                 Добавить
             </button>
-        </div>
+        </form>
     )
 }
 
