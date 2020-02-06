@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import nextId from "react-id-generator";
+// import nextId from "react-id-generator";
 import AppHeader from "../app-header";
 import SearchPanel from "../search-panel";
 import PostStatusFilter from "../post-status-filter";
@@ -26,8 +26,8 @@ export default class App extends Component {
         };
         this.deleteItem = this.deleteItem.bind(this);
         this.addItem = this.addItem.bind(this);
-        this.newId = nextId();
-        // this.maxId = 4;        
+        // this.newId = nextId();
+        this.maxId = 4;
     }
 
 
@@ -51,8 +51,7 @@ export default class App extends Component {
         const newItem = {
             label: body,
             important: false,
-            // id: this.maxId++
-            id: this.newId
+            id: this.maxId++
         };
 
         this.setState(({ data }) => {
